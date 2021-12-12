@@ -1,0 +1,129 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: 1s inline;
+  display: none;
+
+  &.open {
+    opacity: 100%;
+    display: inline-block;
+  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.sidebar {
+  background-color: #d9d9d9;
+  transform: translateX(-300px);
+  width: 300px;
+  height: 100vh;
+  transition: 0.3s linear;
+  z-index: 1;
+  position: fixed;
+
+  .close {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+
+    .button-close {
+      border: none;
+      background-color: #d9d9d9;
+    }
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  .fixed {
+    .container {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+
+      .sidebar-header {
+        .logo {
+          display: none;
+          height: 80px;
+          width: 80px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          @media (min-width: 992px) {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+
+        @media (min-width: 992px) {
+          width: 100%;
+        }
+      }
+
+      .sidebar-body {
+        margin-top: 60px;
+
+        .sidebar-list {
+          .links {
+            text-decoration: none;
+            width: 100%;
+
+            .items {
+              & + li {
+                margin-top: 20px;
+              }
+
+              padding: 13px 20px;
+
+              div {
+                .text {
+                  color: #7a7a7a;
+                  font-family: "Inter", "sans-serif";
+                  font-size: 16px;
+                }
+              }
+
+              @media (min-width: 992px) {
+                border-radius: 10px;
+                &:hover {
+                  cursor: pointer;
+                  background-color: #2732c2;
+
+                  & > div .text {
+                    color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @media (min-width: 992px) {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 992px) {
+        flex-direction: column;
+        align-items: start;
+        padding-top: 40px;
+      }
+    }
+  }
+  &.open {
+    transform: translateX(0);
+  }
+
+  @media (min-width: 992px) {
+    transform: translateX(0);
+    width: 250px;
+    position: fixed;
+  }
+}

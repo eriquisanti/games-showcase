@@ -1,0 +1,21 @@
+.button {
+    width: max-content;
+    height:max-content;
+    background-color: #F7F5FB;
+    border-radius: 5px;
+    border: none;
+    .lines {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .line-button {
+            & + div {
+                margin-top: 3px;
+            }
+            height: 3px;
+            width: 20px;
+            background-color: #000000;
+            border-radius: 5px;
+        }
+    }
+}

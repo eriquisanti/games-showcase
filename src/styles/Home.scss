@@ -1,0 +1,18 @@
+// background-color: #ECEEF2;
+.main-container {
+  @media (min-width: 992px) {
+    display: flex;
+  }
+
+  .main-body {
+    .main-carousel {
+      margin-top: 45px;
+    }
+    @media (min-width: 992px) {
+      max-width: 80%;
+      margin-top: 35px;
+      position: absolute;
+      left: 250px;
+    }
+  }
+}
