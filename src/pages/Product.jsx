@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-no-target-blank */
 import { useContext, useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -36,13 +37,14 @@ export function Product() {
     }
 
     console.log(id.match("\\d"));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 2000,
-    slidesToShow: isMobile ? 1 : 3,
+    slidesToShow: isMobile ? 1 : 2,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
