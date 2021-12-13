@@ -16,7 +16,6 @@ function SearchFild() {
   function handleSearch(event){
     event.preventDefault();
     searchGame(search)
-    console.log(location)
     !location.pathname.includes("/shop") && history.push("/shop")
   }
 

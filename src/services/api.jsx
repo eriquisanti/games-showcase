@@ -1,7 +1,5 @@
 import axios from "axios";
 
-console.log(process.env.RAPIDAPI_HOST)
-
 export  function Api (params) {
   const options = {
     method: 'GET',
@@ -31,15 +29,3 @@ export  function apiGame (id) {
   return axios.request(options)
  
 }
-
-// import axios from "axios";
-
-// const api = axios.create({
-//   baseURL: "https://free-to-play-games-database.p.rapidapi.com/api/games",
-//   headers: {
-//     "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
-//     "x-rapidapi-key": "92fee0d204msh0b2655815e1aaf8p12adeejsnaa795e0f7308",
-//   },
-// });
-
-// export default api;

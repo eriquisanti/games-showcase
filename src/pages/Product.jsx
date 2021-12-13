@@ -35,8 +35,6 @@ export function Product() {
     }else {
       history.push("/")
     }
-
-    console.log(id.match("\\d"));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
